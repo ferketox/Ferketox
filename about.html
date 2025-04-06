@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferketox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 30px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none; /* Removes bullet points */
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 120px auto 80px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 40px 0 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            margin: 0 auto 20px;
+            border: 1px solid #ffffff;
+            overflow: hidden;
+        }
+
+        .member-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .member-title {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            border-top: 1px solid #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px 0;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .container {
+                margin-top: 100px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo-img"></div>
+                <a href="MARKETOX.png" class="logo">FERKETOX</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="books.html">Library</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="https://ferketox.wordpress.com/">Blog</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+            </nav>
+        </div>
+    </header>
+    <body>
+        <div class="container">
+            <h1>About Us</h1>
+            
+            <p>At Ferketox, we're building the ultimate business empowerment platform. This MVP focuses on two core offerings to kickstart your growth:</p> 
+    
+                <p><b>Business Services:</b> From digital marketing and branding to social media management, our expert team helps you scale smart and fast.</p>
+                
+                <p><b>Library:</b> Access a curated selection of essential business and finance books – because education should never be a barrier to success.</p> 
+                
+                <p>This is just the start. As we grow, Ferketox will evolve into a full-scale ecosystem for entrepreneurs and enterprises worldwide.</p>
+            
+            <h2>Our Philosophy</h2>
+            <p>We believe business should be accessible, efficient, and deeply human. In a world flooded with complexity, we aim to simplify — offering clear tools, services, and knowledge that empower people to build, grow, and thrive.</p>
+    
+                <p>We're not just a platform. We're a mindset:</p>
+                <p>Build smart. Learn fast. Evolve constantly.</p>
+                
+                <p>This is just the MVP — but our philosophy is long-term. We grow with our community, stay adaptable, and never settle for average.</p>
+            
+            <h2>C-Suite</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3 class="member-name">ZAINAB</h3>
+                    <p class="member-title">Founder & CEO</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3 class="member-name">SAM</h3>
+                    <p class="member-title">CFO</p>
+                </div>
+                
+            </div>
+            
+            <h2>Our Approach</h2>
+            <p>Every project begins with understanding the core need. We then apply our minimalist philosophy through a disciplined production process that values execution, growth, and empowering entrepreneurs.</p>
+        </div>
+    </body>
+    
+    <footer class="footer">
+        <p>© 2025 FERKETOX. All rights reserved.</p>
+    </footer>
+</body>
+</html>
