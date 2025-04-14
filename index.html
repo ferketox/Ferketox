@@ -99,7 +99,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 30px 0;
+            padding: 20px 0;
             z-index: 1000;
             background-color: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(10px);
@@ -108,7 +108,7 @@
         }
 
         header.scrolled {
-            padding: 15px 0;
+            padding: 10px 0;
             box-shadow: 0 5px 30px rgba(255, 255, 255, 0.05);
         }
 
@@ -121,12 +121,12 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         .logo-img {
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             background-image: url('logo.png'); 
             background-size: cover; 
             background-position: center; 
@@ -135,11 +135,10 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 300;
             letter-spacing: 2px;
             font-family: 'Times New Roman';
-            margin-left: -20px;
         }
 
         nav ul {
@@ -148,12 +147,13 @@
         }
 
         nav ul li {
-            margin-left: 40px;
+            margin-left: 25px;
         }
 
         nav ul li a {
             position: relative;
             padding-bottom: 5px;
+            font-size: 0.9rem;
         }
 
         nav ul li a:after {
@@ -169,6 +169,64 @@
 
         nav ul li a:hover:after {
             width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: var(--black);
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 80px 30px 30px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul li a {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Hero Section */
@@ -209,7 +267,7 @@
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border: 1px solid var(--white);
             position: relative;
             overflow: hidden;
@@ -287,259 +345,16 @@
             animation-duration: 18s;
         }
 
-        /* Testimonials Section */
-        .testimonials {
-            text-align: center;
-            background-color: var(--gray);
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 60px auto 0;
-            position: relative;
-            perspective: 1000px;
-        }
-
-        .testimonial-slide {
-            background: var(--black);
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-            transform-style: preserve-3d;
-            transform: rotateY(10deg);
-            transition: var(--transition);
-            opacity: 0.7;
-        }
-
-        .testimonial-slide.active {
-            transform: rotateY(0deg);
-            opacity: 1;
-            box-shadow: 0 20px 50px rgba(255, 255, 255, 0.1);
-        }
-
-        .client-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border: 2px solid var(--white);
-        }
-
-        .client-name {
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .client-company {
-            font-style: italic;
-            color: var(--light-gray);
-        }
-
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            background: var(--gray);
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid var(--white);
-        }
-
-        .slider-dot.active {
-            background: var(--white);
-        }
-
         /* Services Section */
         .services {
             text-align: center;
         }
 
-        /* Contact Section */
-        .contact {
-            background-color: var(--black);
-        }
-
-        .contact-container {
-            display: flex;
-            gap: 80px;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 30px;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .info-icon {
-            font-size: 1.2rem;
-            margin-right: 15px;
-            width: 30px;
-            text-align: center;
-        }
-
-        .contact-form {
-            flex: 1;
-            background: var(--gray);
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
-            transform-style: preserve-3d;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-form:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: var(--black);
-            font-family: inherit;
-            transition: var(--transition);
-            color: var(--white);
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--white);
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: var(--black);
-            color: var(--white);
-            border: 1px solid var(--white);
-            padding: 15px 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            background: var(--white);
-            color: var(--black);
-            box-shadow: var(--neon-glow);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--gray);
-            color: var(--white);
-            padding: 80px 0 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .footer-logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo-img {
-            width: 40px;
-            height: 40px;
-            background-image: url('footer logo.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            border-radius: 50%;
-            border: 1px solid white;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            font-family: 'Times New Roman';
-            margin-left: -3px;
-        }
-
-        .footer-links h4 {
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links ul li a {
-            color: rgba(255, 255, 255, 0.7);
-            transition: var(--transition);
-        }
-
-        .footer-links ul li a:hover {
-            color: var(--white);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px);
-            text-shadow: var(--neon-glow);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-        }
-
         /* 3D Globe */
         .globe-container {
             position: relative;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             margin: 0 auto;
             perspective: 1000px;
         }
@@ -577,18 +392,109 @@
             transform-style: preserve-3d;
         }
 
-        .globe-dots:nth-child(1) { transform: rotateY(0deg) rotateX(30deg) translateZ(150px); }
-        .globe-dots:nth-child(2) { transform: rotateY(60deg) rotateX(60deg) translateZ(150px); }
-        .globe-dots:nth-child(3) { transform: rotateY(120deg) rotateX(30deg) translateZ(150px); }
-        .globe-dots:nth-child(4) { transform: rotateY(180deg) rotateX(60deg) translateZ(150px); }
-        .globe-dots:nth-child(5) { transform: rotateY(240deg) rotateX(30deg) translateZ(150px); }
-        .globe-dots:nth-child(6) { transform: rotateY(300deg) rotateX(60deg) translateZ(150px); }
-        .globe-dots:nth-child(7) { transform: rotateY(0deg) rotateX(-30deg) translateZ(150px); }
-        .globe-dots:nth-child(8) { transform: rotateY(60deg) rotateX(-60deg) translateZ(150px); }
-        .globe-dots:nth-child(9) { transform: rotateY(120deg) rotateX(-30deg) translateZ(150px); }
-        .globe-dots:nth-child(10) { transform: rotateY(180deg) rotateX(-60deg) translateZ(150px); }
-        .globe-dots:nth-child(11) { transform: rotateY(240deg) rotateX(-30deg) translateZ(150px); }
-        .globe-dots:nth-child(12) { transform: rotateY(300deg) rotateX(-60deg) translateZ(150px); }
+        .globe-dots:nth-child(1) { transform: rotateY(0deg) rotateX(30deg) translateZ(125px); }
+        .globe-dots:nth-child(2) { transform: rotateY(60deg) rotateX(60deg) translateZ(125px); }
+        .globe-dots:nth-child(3) { transform: rotateY(120deg) rotateX(30deg) translateZ(125px); }
+        .globe-dots:nth-child(4) { transform: rotateY(180deg) rotateX(60deg) translateZ(125px); }
+        .globe-dots:nth-child(5) { transform: rotateY(240deg) rotateX(30deg) translateZ(125px); }
+        .globe-dots:nth-child(6) { transform: rotateY(300deg) rotateX(60deg) translateZ(125px); }
+        .globe-dots:nth-child(7) { transform: rotateY(0deg) rotateX(-30deg) translateZ(125px); }
+        .globe-dots:nth-child(8) { transform: rotateY(60deg) rotateX(-60deg) translateZ(125px); }
+        .globe-dots:nth-child(9) { transform: rotateY(120deg) rotateX(-30deg) translateZ(125px); }
+        .globe-dots:nth-child(10) { transform: rotateY(180deg) rotateX(-60deg) translateZ(125px); }
+        .globe-dots:nth-child(11) { transform: rotateY(240deg) rotateX(-30deg) translateZ(125px); }
+        .globe-dots:nth-child(12) { transform: rotateY(300deg) rotateX(-60deg) translateZ(125px); }
+
+        /* Footer */
+        footer {
+            background: var(--gray);
+            color: var(--white);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            background-image: url('footer logo.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-family: 'Times New Roman';
+            margin-left: -3px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            gap: 15px;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            text-shadow: var(--neon-glow);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+        }
 
         /* Animations */
         @keyframes fadeInUp {
@@ -625,19 +531,6 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .about-container, .contact-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .about-image, .about-content, .contact-info, .contact-form {
-                width: 100%;
-            }
-
-            .contact-form {
-                transform: perspective(1000px) rotateY(0deg);
-            }
-
             h1 {
                 font-size: 3rem;
             }
@@ -647,30 +540,134 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 365px) {
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo-container {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .logo-img {
+                width: 20px;
+                height: 20px;
+                background-image: url('logo.png'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;
+                border-radius: 50%;
+            }
+
+            .logo {
+                font-size: 0.6rem;
+                font-weight: 100;
+                letter-spacing: 0px;
+                font-family: 'Times New Roman';
+                margin-left: -25px;
+                margin-right: 10px;
+            }
             nav ul {
-                display: none;
+                display: flex;
+                list-style: none;
+            }
+
+            nav ul li {
+                margin-left: -2px;
+                margin-right: 7px;
+            }
+
+            nav ul li a {
+                position: relative;
+                padding-bottom: 5px;
+                font-size: 0.7rem;
+            }
+
+            nav ul li a:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: var(--white);
+                transition: var(--transition);
+            }
+
+            nav ul li a:hover:after {
+                width: 100%;
             }
 
             .menu-toggle {
                 display: block;
-                font-size: 1.5rem;
-                cursor: pointer;
             }
 
             section {
-                padding: 70px 0;
+                padding: 60px 0;
+            }
+
+            .hero {
+                margin-top: 60px;
+                height: auto;
+                min-height: 70vh;
+                padding: 80px 0;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
+        @media (max-width: 365px) {
+            .logo {
+                font-size: 1.2rem;
+
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                margin-left: -10px;
+                
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .globe-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            .globe-dots:nth-child(1) { transform: rotateY(0deg) rotateX(30deg) translateZ(125px); }
+            .globe-dots:nth-child(2) { transform: rotateY(60deg) rotateX(60deg) translateZ(125px); }
+            .globe-dots:nth-child(3) { transform: rotateY(120deg) rotateX(30deg) translateZ(125px); }
+            .globe-dots:nth-child(4) { transform: rotateY(180deg) rotateX(60deg) translateZ(125px); }
+            .globe-dots:nth-child(5) { transform: rotateY(240deg) rotateX(30deg) translateZ(125px); }
+            .globe-dots:nth-child(6) { transform: rotateY(300deg) rotateX(60deg) translateZ(125px); }
+            .globe-dots:nth-child(7) { transform: rotateY(0deg) rotateX(-30deg) translateZ(125px); }
+            .globe-dots:nth-child(8) { transform: rotateY(60deg) rotateX(-60deg) translateZ(125px); }
+            .globe-dots:nth-child(9) { transform: rotateY(120deg) rotateX(-30deg) translateZ(125px); }
+            .globe-dots:nth-child(10) { transform: rotateY(180deg) rotateX(-60deg) translateZ(125px); }
+            .globe-dots:nth-child(11) { transform: rotateY(240deg) rotateX(-30deg) translateZ(125px); }
+            .globe-dots:nth-child(12) { transform: rotateY(300deg) rotateX(-60deg) translateZ(125px); }
+        }
     </style>
 </head>
 <body>
@@ -679,20 +676,26 @@
         <div class="container header-container">
             <div class="logo-container">
                 <div class="logo-img"></div>
-                <a href="MARKETOX.png" class="logo">FERKETOX</a>
+                <a href="#" class="logo">FERKETOX</a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
+                <ul class="desktop-nav">
                     <li><a href="about.html">About</a></li>
-                    <!--<li><a href="services.html">Services</a></li>-->
                     <li><a href="books.html">Library</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="https://ferketox.wordpress.com/">Blog</a></li>
-                    <!--<li><a href="register.html">Register</a></li>-->
-
                 </ul>
             </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="books.html">Library</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://ferketox.wordpress.com/">Blog</a></li>
+            </ul>
         </div>
     </header>
 
@@ -745,11 +748,25 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-links">
+                    <!-- Top logo and text -->
                     <div class="footer-logo-container">
                         <div class="footer-logo-img"></div>
                         <div class="footer-logo">FERKETOX</div>
                     </div>
                     <p>Elevating brands through strategic design since 2010.</p>
+                </div>
+
+                <!-- Bottom columns 
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="books.html">Library</a></li>
+                        <li><a href="https://ferketox.wordpress.com/">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Services</h4>
@@ -762,16 +779,6 @@
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="books.html">Library</a></li>
-                        <li><a href="https://ferketox.wordpress.com/">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
                     <h4>Locations</h4>
                     <ul>
                         <li><a href="#">New York</a></li>
@@ -781,59 +788,16 @@
                         <li><a href="#">See all offices</a></li>
                     </ul>
                 </div>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2025 FERKETOX Design Group. All rights reserved.
-            </div>
+            </div>-->
         </div>
-    </footer>
+        <div class="copyright">
+            &copy; 2025 FERKETOX Design Group. All rights reserved.
+        </div>
+        
+    </footer>    
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Testimonial slider
-        const slides = document.querySelectorAll('.testimonial-slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        let currentSlide = 0;
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-        }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-
-        // Auto slide
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        
     </script>
 </body>
 </html>
