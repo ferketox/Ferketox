@@ -113,6 +113,12 @@
             width: 100%;
         }
 
+        .book-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
         .book {
             background: var(--gray);
             padding: 25px;
@@ -124,6 +130,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            transition: 0.3s;
+            cursor: pointer;
         }
 
         .book:hover {
@@ -251,12 +259,13 @@
         /* Responsive */
         @media (max-width: 768px) {
             .header {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 padding: 20px;
+                font-family: 'Times New Roman', Times, serif;
             }
             
             .container {
-                margin-top: 100px;
+                margin-top: 90px;
             }
             
             .controls {
@@ -286,7 +295,7 @@
         <div class="shape"></div>
     </div>
 
-    <div class="header">Ferketox Book Collection</div>
+    <div class="header">Library Of FERKETOX</div>
     <div class="container">
         <div class="controls">
             <div class="search-bar">
@@ -306,102 +315,148 @@
         </div>
 
         <div class="book-container">
-            <div class="book" data-category="finance">
-                <img src="candlestick trading bible.png" alt="The CandleStick Trading Bible">
-                <a href="https://drive.google.com/file/d/1WbQrbKRbYhrSw03Ga8VhcoQi4Xmzr5hC/view?usp=drivesdk" target="_blank" class="book-title">The CandleStick Trading Bible</a>
-                <div class="writer">Munehisa Homma</div>
-                <div class="book-category">Trading</div>
-            </div>
-            <div class="book" data-category="economics">
-                <img src="getting to yes.png" alt="Getting to Yes">
-                <a href="https://drive.google.com/file/d/1Ws8r7rgE5U5UBEckQc8zPP9hM10KIwHo/view?usp=drivesdk" target="_blank" class="book-title">Getting to Yes</a>
-                <div class="writer">Roger Fisher</div>
-                <div class="book-category">Negotiation</div>
-            </div>
-            <div class="book" data-category="mba">
-                <img src="predictably bookcover.png" alt="Predictable">
-                <a href="https://drive.google.com/file/d/1Wovib2jY9SnDN3zaNrWDg9nXin5i7MoM/view?usp=drivesdk" target="_blank" class="book-title">Predictable</a>
-                <div class="writer">Dan Ariely</div>
-                <div class="book-category">Psychology</div>
-            </div>
-            <div class="book" data-category="business">
-                <img src="rich-dad-poor-dad.png" alt="Rich Dad Poor Dad">
-                <a href="https://drive.google.com/file/d/1WoR-UE_UFOOm6pk613Mk626c3-694V_U/view?usp=drivesdk" target="_blank" class="book-title">Rich Dad Poor Dad</a>
-                <div class="writer">Robert T. Kiyosaki</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="others">
-                <img src="wealth of nations.png" alt="The Wealth of Nations">
-                <a href="https://drive.google.com/file/d/1WnfJD6nslkoGl0Nl4l1mIepTQP4Fc1Mf/view?usp=drivesdk" target="_blank" class="book-title">The Wealth of Nations</a>
-                <div class="writer">Adam Smith</div>
-                <div class="book-category">Economics</div>
-            </div>
-            <div class="book" data-category="finance">
-                <img src="psychology of money.png" alt="The Psychology of Money">
-                <a href="https://drive.google.com/file/d/1WnoW8VQ9HzoLojmWGx00Y3njshQqwdsX/view?usp=drivesdk" target="_blank" class="book-title">The Psychology of Money</a>
-                <div class="writer">Morgan Housel</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="finance">
-                <img src="blue ocean strategy.png" alt="Blue Ocean Strategy">
-                <a href="https://drive.google.com/file/d/1XQs9N6-H1Ojilg_ESH7JViRrGa5Te4p7/view?usp=drivesdk" target="_blank" class="book-title">Blue Ocean Strategy</a>
-                <div class="writer">W. Chan Kim & Renee Mauborgne</div>
-                <div class="book-category">Business Strategy</div>
-            </div>
-            <div class="book" data-category="economics">
-                <img src="good to great.png" alt="Good to Great">
-                <a href="" target="_blank" class="book-title">Good to Great</a>
-                <div class="writer">Jim Collins</div>
-                <div class="book-category">Business Strategy</div>
-            </div>
-            <div class="book" data-category="mba">
-                <img src="art ofstrategy.png" alt="The Art of Strategy">
-                <a href="https://drive.google.com/file/d/1XTfJ4pRkyxILNdyd5c2ImFk3xxNNzr23/view?usp=drivesdk" target="_blank" class="book-title">The Art of Strategy</a>
-                <div class="writer">Avinash K. Dixit & Barry J. Nalebuff</div>
-                <div class="book-category">Business Strategy</div>
-            </div>
-            <div class="book" data-category="business">
-                <img src="measure what matters.png" alt="Measure What Matters">
-                <a href="https://drive.google.com/file/d/1XFTmDTnLjd-cYm8Od4vcrcbqUNBcQxlz/view?usp=drivesdk" target="_blank" class="book-title">Measure What Matters</a>
-                <div class="writer">John Doerr</div>
-                <div class="book-category">Business Strategy</div>
-            </div>
-            <div class="book" data-category="others">
-                <img src="hard things about hard things book cover.png" alt="The Hard Thing About Hard Things">
-                <a href="https://drive.google.com/file/d/1XHIVoizas8k2zYZ_U0yGb2VcbTXJPkTW/view?usp=drivesdk" target="_blank" class="book-title">The Hard Thing About Hard Things</a>
-                <div class="writer">Ben Horowitz</div>
-                <div class="book-category">Business Strategy</div>
-            </div>
-            <div class="book" data-category="finance">
-                <img src="your money or your life.png" alt="Your Money or Your Life">
-                <a href="https://drive.google.com/file/d/1XHRVpMfd9ONZu199RjRztdFSgxp7YZjL/view?usp=drivesdk" target="_blank" class="book-title">Your Money or Your Life</a>
-                <div class="writer">Vicki Robin & Joe Dominguez</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="others">
-                <img src="teach you to be rich.png" alt="I Will Teach You to Be Rich">
-                <a href="https://drive.google.com/file/d/1XHu24BZSh9whgqUjoxXggQKLkYN8jC5j/view?usp=drivesdk" target="_blank" class="book-title">I Will Teach You to Be Rich</a>
-                <div class="writer">Ramit Sethii</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="finance">
-                <img src="millionaire next door.png" alt="The Millionaire Next Door">
-                <a href="https://drive.google.com/file/d/1XNG15muUaMdDb4e8_2IervaSWqSX1P61/view?usp=drivesdk" target="_blank" class="book-title">The Millionaire Next Door</a>
-                <div class="writer">Thomas J. Stanley & William D. Danko</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="others">
-                <img src="broke millennial.png" alt="Broke Millennial">
-                <a href="https://drive.google.com/file/d/1XOwwXvDxQfZWbiQHYZEAit3bXal7vbO1/view?usp=drivesdk" target="_blank" class="book-title">Broke Millennial</a>
-                <div class="writer">Erin Lowry</div>
-                <div class="book-category">Money Management</div>
-            </div>
-            <div class="book" data-category="finance">
-                <img src="die with zero.png" alt="Die With Zero">
-                <a href="https://drive.google.com/file/d/1XQU8VSw04Erd7u8HPcqWmELMzquT8Vp8/view?usp=drivesdk" target="_blank" class="book-title">Die With Zero</a>
-                <div class="writer">Bill Perkins</div>
-                <div class="book-category">Money Management</div>
-            </div>
+            <a href="https://drive.google.com/file/d/1WbQrbKRbYhrSw03Ga8VhcoQi4Xmzr5hC/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="candlestick trading bible.png" alt="The CandleStick Trading Bible">
+                  <div class="book-title">The CandleStick Trading Bible</div>
+                  <div class="writer">Munehisa Homma</div>
+                  <div class="book-category">Trading</div>
+                </div>
+            </a>
+            <a href="https://drive.google.com/file/d/1Ws8r7rgE5U5UBEckQc8zPP9hM10KIwHo/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="economics">
+                  <img src="getting to yes.png" alt="Getting to Yes">
+                  <div class="book-title">Getting to Yes</div>
+                  <div class="writer">Roger Fisher</div>
+                  <div class="book-category">Negotiation</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1Wovib2jY9SnDN3zaNrWDg9nXin5i7MoM/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="mba">
+                  <img src="predictably bookcover.png" alt="Predictable">
+                  <div class="book-title">Predictable</div>
+                  <div class="writer">Dan Ariely</div>
+                  <div class="book-category">Psychology</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1WoR-UE_UFOOm6pk613Mk626c3-694V_U/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="business">
+                  <img src="rich-dad-poor-dad.png" alt="Rich Dad Poor Dad">
+                  <div class="book-title">Rich Dad Poor Dad</div>
+                  <div class="writer">Robert T. Kiyosaki</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1WnfJD6nslkoGl0Nl4l1mIepTQP4Fc1Mf/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="others">
+                  <img src="wealth of nations.png" alt="The Wealth of Nations">
+                  <div class="book-title">The Wealth of Nations</div>
+                  <div class="writer">Adam Smith</div>
+                  <div class="book-category">Economics</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1WnoW8VQ9HzoLojmWGx00Y3njshQqwdsX/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="psychology of money.png" alt="The Psychology of Money">
+                  <div class="book-title">The Psychology of Money</div>
+                  <div class="writer">Morgan Housel</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XQs9N6-H1Ojilg_ESH7JViRrGa5Te4p7/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="blue ocean strategy.png" alt="Blue Ocean Strategy">
+                  <div class="book-title">Blue Ocean Strategy</div>
+                  <div class="writer">W. Chan Kim & Renee Mauborgne</div>
+                  <div class="book-category">Business Strategy</div>
+                </div>
+              </a>
+              
+              <a href="#" target="_blank" class="book-link">
+                <div class="book" data-category="economics">
+                  <img src="good to great.png" alt="Good to Great">
+                  <div class="book-title">Good to Great</div>
+                  <div class="writer">Jim Collins</div>
+                  <div class="book-category">Business Strategy</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XTfJ4pRkyxILNdyd5c2ImFk3xxNNzr23/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="mba">
+                  <img src="art ofstrategy.png" alt="The Art of Strategy">
+                  <div class="book-title">The Art of Strategy</div>
+                  <div class="writer">Avinash K. Dixit & Barry J. Nalebuff</div>
+                  <div class="book-category">Business Strategy</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XFTmDTnLjd-cYm8Od4vcrcbqUNBcQxlz/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="business">
+                  <img src="measure what matters.png" alt="Measure What Matters">
+                  <div class="book-title">Measure What Matters</div>
+                  <div class="writer">John Doerr</div>
+                  <div class="book-category">Business Strategy</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XHIVoizas8k2zYZ_U0yGb2VcbTXJPkTW/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="others">
+                  <img src="hard things about hard things book cover.png" alt="The Hard Thing About Hard Things">
+                  <div class="book-title">The Hard Thing About Hard Things</div>
+                  <div class="writer">Ben Horowitz</div>
+                  <div class="book-category">Business Strategy</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XHRVpMfd9ONZu199RjRztdFSgxp7YZjL/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="your money or your life.png" alt="Your Money or Your Life">
+                  <div class="book-title">Your Money or Your Life</div>
+                  <div class="writer">Vicki Robin & Joe Dominguez</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XHu24BZSh9whgqUjoxXggQKLkYN8jC5j/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="others">
+                  <img src="teach you to be rich.png" alt="I Will Teach You to Be Rich">
+                  <div class="book-title">I Will Teach You to Be Rich</div>
+                  <div class="writer">Ramit Sethii</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XNG15muUaMdDb4e8_2IervaSWqSX1P61/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="millionaire next door.png" alt="The Millionaire Next Door">
+                  <div class="book-title">The Millionaire Next Door</div>
+                  <div class="writer">Thomas J. Stanley & William D. Danko</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XOwwXvDxQfZWbiQHYZEAit3bXal7vbO1/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="others">
+                  <img src="broke millennial.png" alt="Broke Millennial">
+                  <div class="book-title">Broke Millennial</div>
+                  <div class="writer">Erin Lowry</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>
+              
+              <a href="https://drive.google.com/file/d/1XQU8VSw04Erd7u8HPcqWmELMzquT8Vp8/view?usp=drivesdk" target="_blank" class="book-link">
+                <div class="book" data-category="finance">
+                  <img src="die with zero.png" alt="Die With Zero">
+                  <div class="book-title">Die With Zero</div>
+                  <div class="writer">Bill Perkins</div>
+                  <div class="book-category">Money Management</div>
+                </div>
+              </a>              
         </div>
     </div>
 
@@ -438,3 +493,4 @@
     </script>
 </body>
 </html>
+
