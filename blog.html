@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Ferketox Favicon.png" type="image/png">
+    <meta name="description" content="Ferketox is a global business management company specializing in marketing, branding, and automation for entrepreneurs.">
+    <title>Ferketox | Blog</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-90: #0a0a0a;
+            --gray-80: #1a1a1a;
+            --gray-20: #e0e0e0;
+            --gray-10: #f0f0f0;
+            
+            /* Base scaling factor */
+            --scale: 1;
+        }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: calc(800px * var(--scale));
+            margin: 0 auto;
+            padding: 0 calc(20px * var(--scale));
+            width: 100%;
+        }
+        
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--gray-80);
+            padding: calc(1.5rem * var(--scale)) 0;
+            margin-bottom: calc(3rem * var(--scale));
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(1rem * var(--scale));
+        }
+        
+        .logo {
+            font-size: calc(1.4rem * var(--scale));
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: var(--white);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background-image: url('logo.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: calc(1.5rem * var(--scale));
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--gray-20);
+            text-decoration: none;
+            font-size: calc(0.8rem * var(--scale));
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        nav a:hover {
+            color: var(--white);
+        }
+        
+        /* Blog Content */
+        .blog-posts {
+            display: grid;
+            gap: calc(3rem * var(--scale));
+            margin-bottom: calc(5rem * var(--scale));
+        }
+        
+        .post {
+            border-bottom: 1px solid var(--gray-80);
+            padding-bottom: calc(2rem * var(--scale));
+        }
+        
+        .post:last-child {
+            border-bottom: none;
+        }
+        
+        .post-date {
+            color: var(--gray-20);
+            font-size: calc(0.8rem * var(--scale));
+            letter-spacing: 0.5px;
+            margin-bottom: calc(0.5rem * var(--scale));
+        }
+        
+        .post-title {
+            font-size: calc(1.8rem * var(--scale));
+            margin: 0 0 calc(1rem * var(--scale)) 0;
+            font-weight: 600;
+        }
+        
+        .post-title a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .post-excerpt {
+            color: var(--gray-20);
+            margin-bottom: calc(1.5rem * var(--scale));
+            line-height: 1.7;
+            font-size: calc(1rem * var(--scale));
+        }
+        
+        .read-more {
+            color: var(--white);
+            text-decoration: none;
+            font-size: calc(0.9rem * var(--scale));
+            border: 1px solid var(--white);
+            padding: calc(0.5rem * var(--scale)) calc(1rem * var(--scale));
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background-color: var(--white);
+            color: var(--black);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 3px;
+            border-top: 1px solid var(--gray-80);
+            text-align: center;
+            color: var(--gray-20);
+            font-size: calc(0.8rem * var(--scale));
+        }
+        
+        /* Responsive Scaling */
+        @media (max-width: 1200px) {
+            :root {
+                --scale: 0.9;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            :root {
+                --scale: 0.85;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --scale: 0.8;
+            }
+            
+            .header-content {
+                justify-content: center;
+                gap: calc(1.5rem * var(--scale));
+            }
+            
+            nav ul {
+                gap: calc(1rem * var(--scale));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            :root {
+                --scale: 0.75;
+            }
+            
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            nav ul {
+                gap: calc(0.8rem * var(--scale));
+            }
+        }
+        
+        @media (max-width: 400px) {
+            :root {
+                --scale: 0.7;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: calc(0.6rem * var(--scale));
+            }
+            
+            .logo {
+                font-size: calc(1rem * var(--scale));
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo-img"></div>
+                <a href="MARKETOX.png" class="logo">FERKETOX</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!--<li><a href="services.html">Services</a></li>-->
+                    <li><a href="books.html">Library</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="register.html">Register</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="blog-posts">
+            <article class="post">
+                <p class="post-date">MAY 3, 2025</p>
+                <h2 class="post-title"><a href="https://ferketox.wordpress.com/2025/05/03/entrepreneurship-business/">Entrepreneurship & Business</a></h2>
+                <p class="post-excerpt">Learn everything you need to know about Entrepreneurship in 6 minutes, including its core concepts and the difference between Entrepreneurship and Business.</p>
+                <a href="https://ferketox.wordpress.com/2025/05/03/entrepreneurship-business/" class="read-more">Read More</a>
+            </article>
+            
+            <article class="post">
+                <p class="post-date">APRIL 28, 2023</p>
+                <h2 class="post-title"><a href="https://ferketox.wordpress.com/2025/02/24/ferketox-home-of-entrepreneurs/">FERKETOX – Home of Entrepreneurs
+                </a></h2>
+                <p class="post-excerpt">Early days of Ferketox. How it started and emerged as a Nexus of Global Entrepreneurship and Powerhouse of Business Evolution.</p>
+                <a href="https://ferketox.wordpress.com/2025/02/24/ferketox-home-of-entrepreneurs/" class="read-more">Read More</a>
+            </article>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 FERKETOX. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void | Blog</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-90: #0a0a0a;
+            --gray-80: #1a1a1a;
+            --gray-20: #e0e0e0;
+            --gray-10: #f0f0f0;
+            
+            /* Base scaling factor */
+            --scale: 1;
+        }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: calc(800px * var(--scale));
+            margin: 0 auto;
+            padding: 0 calc(20px * var(--scale));
+            width: 100%;
+        }
+        
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--gray-80);
+            padding: calc(2rem * var(--scale)) 0;
+            margin-bottom: calc(3rem * var(--scale));
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: calc(1.5rem * var(--scale));
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: var(--white);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: calc(2rem * var(--scale));
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            color: var(--gray-20);
+            text-decoration: none;
+            font-size: calc(0.9rem * var(--scale));
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--white);
+        }
+        
+        /* Blog Content */
+        .blog-posts {
+            display: grid;
+            gap: calc(3rem * var(--scale));
+            margin-bottom: calc(5rem * var(--scale));
+        }
+        
+        .post {
+            border-bottom: 1px solid var(--gray-80);
+            padding-bottom: calc(2rem * var(--scale));
+        }
+        
+        .post:last-child {
+            border-bottom: none;
+        }
+        
+        .post-date {
+            color: var(--gray-20);
+            font-size: calc(0.8rem * var(--scale));
+            letter-spacing: 0.5px;
+            margin-bottom: calc(0.5rem * var(--scale));
+        }
+        
+        .post-title {
+            font-size: calc(1.8rem * var(--scale));
+            margin: 0 0 calc(1rem * var(--scale)) 0;
+            font-weight: 600;
+        }
+        
+        .post-title a {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .post-excerpt {
+            color: var(--gray-20);
+            margin-bottom: calc(1.5rem * var(--scale));
+            line-height: 1.7;
+            font-size: calc(1rem * var(--scale));
+        }
+        
+        .read-more {
+            color: var(--white);
+            text-decoration: none;
+            font-size: calc(0.9rem * var(--scale));
+            border: 1px solid var(--white);
+            padding: calc(0.5rem * var(--scale)) calc(1rem * var(--scale));
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background-color: var(--white);
+            color: var(--black);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: calc(3rem * var(--scale)) 0;
+            border-top: 1px solid var(--gray-80);
+            text-align: center;
+            color: var(--gray-20);
+            font-size: calc(0.8rem * var(--scale));
+        }
+        
+        /* Responsive Scaling */
+        @media (max-width: 1200px) {
+            :root {
+                --scale: 0.9;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            :root {
+                --scale: 0.85;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --scale: 0.8;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: calc(1.5rem * var(--scale));
+            }
+            
+            nav ul {
+                gap: calc(1.5rem * var(--scale));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            :root {
+                --scale: 0.7;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            :root {
+                --scale: 0.65;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">VOID</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog" class="active">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="blog-posts">
+            <article class="post">
+                <p class="post-date">MAY 15, 2023</p>
+                <h2 class="post-title"><a href="/post/minimalism-in-design">Minimalism in Design: The Power of Restraint</a></h2>
+                <p class="post-excerpt">Exploring how less can truly be more in digital design. This post examines the psychological impact of minimalist interfaces and why they often create more powerful user experiences than their complex counterparts.</p>
+                <a href="/post/minimalism-in-design" class="read-more">Read More</a>
+            </article>
+            
+            <article class="post">
+                <p class="post-date">APRIL 28, 2023</p>
+                <h2 class="post-title"><a href="/post/black-and-white-aesthetics">Black and White Aesthetics: Timeless Digital Expression</a></h2>
+                <p class="post-excerpt">Why monochrome palettes continue to dominate in an age of unlimited color. We look at historical precedents and modern implementations that prove contrast often speaks louder than hue.</p>
+                <a href="/post/black-and-white-aesthetics" class="read-more">Read More</a>
+            </article>
+            
+            <article class="post">
+                <p class="post-date">APRIL 10, 2023</p>
+                <h2 class="post-title"><a href="/post/negative-space">The Art of Negative Space</a></h2>
+                <p class="post-excerpt">How what you don't show can be as important as what you do. A technical and philosophical exploration of white space (or in our case, black space) in digital design.</p>
+                <a href="/post/negative-space" class="read-more">Read More</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 VOID. All content is licensed under Creative Commons.</p>
+        </div>
+    </footer>
+</body>
+</html>-->
